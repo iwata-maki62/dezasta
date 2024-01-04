@@ -46,8 +46,6 @@ img {
 
 body {
   background-color: #eeeeee;
-  margin: 10px;
-  max-width: 960px;
 }
 
 h1 {
@@ -59,6 +57,9 @@ h1 {
 .wrap {
   display: flex;
   justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 article {
