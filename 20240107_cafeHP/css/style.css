@@ -210,17 +210,17 @@ main {
   display: flex;
   justify-content: center;
   background-color: #ffffff;
-  border: 3.6px solid;
-  padding: 36px 0;
+  border: 3px solid;
+  padding: 20px;
 }
-.event_border li {
+.event_border ul li {
   font-size: 23px;
   line-height: 1.95;
 }
-.event_border li time {
+.event_border ul li time {
   margin-right: 5%;
 }
-.event_border li a {
+.event_border ul li a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
