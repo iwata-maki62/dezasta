@@ -7,6 +7,7 @@
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,16 @@
         <div class="header_wrap">
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
             <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#menu">MENU</a></li>
@@ -53,6 +64,7 @@
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                    サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                 </p>
             </div>
         </section>
@@ -69,7 +81,7 @@
                 </li>
                 <li class="menu_box">
                     <img src="images/pc_menu_food-100.jpg" alt="食べ物">
-                    <h3>Foods</h3>
+                    <h3>Food</h3>
                     <p>フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </li>
                 <li class="menu_box">
@@ -84,11 +96,11 @@
                 <img src="images/gallery@2x.png" alt="ギャラリー">
             </h2>
             <div class="gallery_images">
-                <img src="images/pc_gallary_01-100.jpg" alt="01">
-                <img src="images/pc_gallary_02-100.jpg" alt="02">
-                <img src="images/pc_gallary_03-100.jpg" alt="03">
-                <img src="images/pc_gallary_04-100.jpg" alt="04">
-                <img src="images/pc_gallary_05-100.jpg" alt="05">
+                <div><img src="images/pc_gallary_01-100.jpg" alt="01"></div>
+                <div><img src="images/pc_gallary_02-100.jpg" alt="02"></div>
+                <div><img src="images/pc_gallary_03-100.jpg" alt="03"></div>
+                <div><img src="images/pc_gallary_04-100.jpg" alt="04"></div>
+                <div><img src="images/pc_gallary_05-100.jpg" alt="05"></div>
             </div>
         </section>
         <section id="event" class="event">
@@ -136,11 +148,23 @@
         <div class="credit">© 2021 DESIGN CAFE
         </div>
     </footer>
-    <div class="pagetop">
+    <p class="pagetop">
         <a href="#header">
             <img src="images/to_top@2x.png" alt="ページトップ">
         </a>
-    </div>
+    </p>
+
+
+    <script>
+        $(function () {
+            //ここの中に記述
+            $('.sp_btn').on('click', function () {
+                //ここの中に記述  
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+    </script>
 </body>
 
 </html>
