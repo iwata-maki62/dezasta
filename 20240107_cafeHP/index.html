@@ -105,12 +105,25 @@
             <h2>
                 <img src="images/gallery@2x.png" alt="ギャラリー">
             </h2>
+
             <div class="gallery_images">
-                <div><img src="images/pc_gallary_01-100.jpg" alt="01"></div>
-                <div><img src="images/pc_gallary_02-100.jpg" alt="02"></div>
-                <div><img src="images/pc_gallary_03-100.jpg" alt="03"></div>
-                <div><img src="images/pc_gallary_04-100.jpg" alt="04"></div>
-                <div><img src="images/pc_gallary_05-100.jpg" alt="05"></div>
+                <ul class="images_01_05">
+                    <li class="images_01">
+                        <div><img src="images/pc_gallary_01-100.jpg" alt="01"></div>
+                    </li>
+                    <li class="images_02">
+                        <div><img src="images/pc_gallary_02-100.jpg" alt="02"></div>
+                    </li>
+                    <li class="images_03">
+                        <div><img src="images/pc_gallary_03-100.jpg" alt="03"></div>
+                    </li>
+                    <li class="images_04">
+                        <div><img src="images/pc_gallary_04-100.jpg" alt="04"></div>
+                    </li>
+                    <li class="images_05">
+                        <div><img src="images/pc_gallary_05-100.jpg" alt="05"></div>
+                    </li>
+                </ul>
             </div>
         </section>
         <section id="event" class="event">
@@ -148,7 +161,7 @@
     </main>
     <footer>
         <div class="footer_img">
-            <img src="images/design_cafe_logo_footer@2x.png" alt="DESIGN CAFE">
+            <div><img src="images/design_cafe_logo_footer@2x.png" alt="DESIGN CAFE"></div>
             <p>OPEN 18:00 / CLOSE 24:00<br>
                 〒150-0022<br>
                 東京都渋谷区東京南123デザインビルB1<br>
@@ -170,6 +183,7 @@
             //ここの中に記述
             $('.sp_btn').on('click', function () {
                 //ここの中に記述  
+                $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
             });
         });
