@@ -111,6 +111,11 @@ img {
 .header_logo {
   width: 226px;
 }
+@media screen and (max-width: 767px) {
+  .header_logo {
+    width: 188px;
+  }
+}
 
 main {
   background-color: #e8d9bf;
@@ -239,8 +244,7 @@ main {
     font-size: 17px;
   }
   .lead p:nth-child(2) {
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin: 20px 0 15px;
     font-size: 38px;
     line-height: 1.15;
     letter-spacing: 0.02em;
@@ -404,7 +408,7 @@ main {
 @media screen and (max-width: 767px) {
   .gallery h2 {
     width: 142px;
-    margin: o auto 15px;
+    margin: 0 auto 15px;
   }
   .images_03 {
     width: 100%;
@@ -452,12 +456,6 @@ main {
 .event_border ul li a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  display: inline-block;
-  overflow: hidden;
-  width: 515px;
-  /* どこから515が来るのかわかりません */
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 767px) {
@@ -469,23 +467,28 @@ main {
     width: 101px;
   }
   .event_border {
-    padding: 20px 10px 15px 25px;
+    padding: 20px 28px;
     font-size: 16px;
+    display: block;
   }
   .event_border ul {
     width: 100%;
     font-size: 16px;
   }
-  .event_border ul il {
+  .event_border ul li {
     display: flex;
     flex-direction: column;
+    line-height: 1.2;
   }
 
-  .event_border ul il + li {
+  .event_border ul li + li {
     margin-top: 26px;
   }
-  .event_border ul il a {
-    width: 100%;
+  .event_border ul li a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
