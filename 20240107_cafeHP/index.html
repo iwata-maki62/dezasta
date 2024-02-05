@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
 </head>
 
 <body>
@@ -17,6 +23,12 @@
                 <picture>
                     <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
                     <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/slider_2.jpg" alt="店内の様子">
                 </picture>
             </div>
         </div>
@@ -109,19 +121,34 @@
             <div class="gallery_images">
                 <ul class="images_01_05">
                     <li class="images_01">
-                        <div><img src="images/pc_gallary_01-100.jpg" alt="01"></div>
+                        <div><a href="images/pc_gallary_01-100.jpg" data-lightbox="01" alt="01" data-title="ギャラリー１">
+                                <img src="images/pc_gallary_01-100.jpg" alt="01"></a>
+                        </div>
                     </li>
                     <li class="images_02">
-                        <div><img src="images/pc_gallary_02-100.jpg" alt="02"></div>
+                        <div><a href="images/pc_gallary_02-100.jpg" data-lightbox="02" alt="02" data-title="ギャラリー２">
+                                <img src="images/pc_gallary_02-100.jpg" alt="02"></a>
+                        </div>
                     </li>
                     <li class="images_03">
-                        <div><img src="images/pc_gallary_03-100.jpg" alt="03"></div>
+                        <div><a href="images/pc_gallary_03-100.jpg" data-lightbox="03" alt="03" data-title="ギャラリー３">
+                                <img src="images/pc_gallary_03-100.jpg" alt="03"></a>
+                        </div>
                     </li>
                     <li class="images_04">
-                        <div><img src="images/pc_gallary_04-100.jpg" alt="04"></div>
+                        <div><a href="images/pc_gallary_04-100.jpg" data-lightbox="04" alt="04" data-title="ギャラリー４">
+                                <img src="images/pc_gallary_04-100.jpg" alt="04"></a>
+                        </div>
                     </li>
                     <li class="images_05">
-                        <div><img src="images/pc_gallary_05-100.jpg" alt="05"></div>
+                        <div><a href="images/pc_gallary_05-100.jpg" data-lightbox="05" alt="05" data-title="ギャラリー５">
+                                <img src="images/pc_gallary_03-100.jpg" alt="05"></a>
+                        </div>
+                    </li>
+                    <li class="images_06">
+                        <div><a helf="images/pc_gallary_01-100.jpg" data-lightbox="06" alt="06" data-title="ギャラリー６">
+                                <img src="images/pc_gallary_01-100.jpg" alt="06"></a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -186,7 +213,28 @@
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
             });
-        });
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            });
+
+            $('.images_01_05').slick({
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        })
     </script>
 </body>
 
