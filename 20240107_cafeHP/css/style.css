@@ -414,22 +414,20 @@ main {
 .gallery h2 {
   width: 245px;
 }
-.images_01_05 {
+.gallery_images {
   display: flex;
 }
 
 /* gallery_複数表示 */
 .slick-prev {
-  left: 0;
+  left: 25%;
   z-index: 2;
-  top: 40%;
-  padding: 5% 5% 5% 25%;
+  height: 45px;
 }
 .slick-next {
-  right: 0;
+  right: 25%;
   z-index: 2;
-  top: 40%;
-  padding: 5% 25% 5% 5%;
+  height: 45px;
 }
 
 .slick-prev:before {
@@ -465,12 +463,10 @@ main {
     margin: 0 auto 15px;
   }
   .slick-prev {
-    top: 47%;
-    padding-left: 20px;
+    right: 10%;
   }
   .slick-next {
-    top: 47%;
-    padding-right: 40px;
+    right: 10%;
   }
 
   .slick-prev:before {
