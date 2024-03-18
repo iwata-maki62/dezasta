@@ -1,0 +1,51 @@
+.top_works {
+  text-align: center;
+  margin: 116px 73px;
+}
+
+.top_works img {
+  width: 30%;
+}
+
+.message {
+  text-align: left;
+  font-size: 3vw;
+  font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
+}
+.message2 {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 1.3vw;
+  line-height: 1.3;
+  font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
+}
+.works {
+  padding-top: 106px;
+  display: flex;
+  align-items: end;
+}
+.works img {
+  padding-left: 45px;
+  width: 465px;
+}
+.works_text {
+  text-align: left;
+  padding-left: 45px;
+}
+.text1 {
+  font-size: 15px;
+}
+.text2 {
+  padding-top: 23px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.sticky {
+  position: sticky;
+  top: 535px;
+  height: max-content;
+}
