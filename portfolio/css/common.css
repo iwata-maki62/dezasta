@@ -42,15 +42,12 @@ img {
 
 body {
   background-image: url("../images/bg-min.jpg");
+
   background-repeat: repeat;
 }
 main {
   max-width: 1280px;
   margin: 0 auto;
-}
-.top_main_wrap {
-  display: flex;
-  justify-content: space-between;
 }
 
 .main_logo {
@@ -58,10 +55,6 @@ main {
   width: 15vw;
 }
 
-picture img {
-  width: 888px;
-  border-top-left-radius: 140px;
-}
 .pc_nav {
   text-align: center;
   margin: 40px 0;
