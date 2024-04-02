@@ -1,0 +1,39 @@
+body {
+  margin: 0 20px;
+}
+.contact {
+  text-align: center;
+}
+.contact img {
+  width: 33%;
+  transform: translate(-10%, 0);
+}
+.contact_message {
+  font-size: 1.6vw;
+  color: #2d3487;
+  margin: 5.3vw auto 8.9vw;
+  text-align: center;
+  line-height: 1.6;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.email {
+  display: block;
+  padding-bottom: 10px;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  color: #999;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+button {
+  margin: 20px 17% 50px;
+}

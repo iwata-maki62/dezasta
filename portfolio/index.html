@@ -4,26 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>maki×design. ホームページ</title>
+    <meta name="description" content="「伝えたい。」あなたらしさや良いところ。一緒に見つけて、カタチにします。
+    グラフィックも制作可能なウェブデザイナーのホームページです。">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="android-chrome-256x256.png">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <main>
         <div class="flex">
             <header id="top_header">
-                <h1>
-                    <img src="images/logo.svg" alt="maki_design">
-                </h1>
-                <nav class="top_pc_nav">
-                    <ul>
-                        <li><a href=""><span>Works</span></a></li>
-                        <li><a href=""><span>Skills</span></a></li>
-                        <li><a href=""><span>Profile</span></a></li>
-                        <li><a href=""><span>Contact</span></a></li>
-                    </ul>
-                </nav>
+                <div class="sp_flex">
+                    <h1>
+                        <img src="images/logo.svg" alt="maki_design">
+                    </h1>
+                    <nav class="top pc_nav">
+                        <ul>
+                            <li><a href="#top_works"><span>Works</span></a></li>
+                            <li><a href="#skills"><span>Skills</span></a></li>
+                            <li><a href="#profile"><span>Profile</span></a></li>
+                            <li><a href="#top_contact"><span>Contact</span></a></li>
+                        </ul>
+                    </nav>
+                    <div class="top sp_btn"><span></span></div>
+                    <nav class="top sp_nav">
+                        <ul>
+                            <li><a href="#top_works"><span>Works</span></a></li>
+                            <li><a href="#skills"><span>Skills</span></a></li>
+                            <li><a href="#profile"><span>Profile</span></a></li>
+                            <li><a href="#top_contact"><span>Contact</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="sticky">
                     <p class="message">
                         伝えたい。
@@ -42,9 +59,9 @@
                 <div class="scroll">
                     <p>scroll</p>
                 </div>
-                <div id="top_works" class="works_title">
+                <h2 id="top_works" class="works_title">
                     <img src="images/works_hane.png" alt="Works">
-                </div>
+                </h2>
 
                 <div class="works">
                     <div class="works_img">
@@ -105,10 +122,10 @@
         </div>
         <!-- button -->
         <div class="btn_space">
-            <a href="#" class="btn">もっと見る　＞</a>
+            <a href="./works/index.html#works" class="btn">もっと見る　＞</a>
         </div>
         <!-- button -->
-        <div class="skills">
+        <div id="skills" class="skills">
             <div class="skills_img">
                 <img src="images/skills_hane.png" alt="skills">
             </div>
@@ -146,7 +163,7 @@
             </div>
         </div>
 
-        <div class="profile">
+        <div id="profile" class="profile">
             <div class="profile_img">
                 <img src="images/profile_hane.png" alt="profile">
             </div>
@@ -161,7 +178,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact">
+        <div id="top_contact" class="contact">
             <div class="contact_img">
                 <img src="images/contact_hane.png" alt="Contact">
             </div>
@@ -170,7 +187,7 @@
                 一緒に素晴らしいものを形にしましょう。お気軽にお問い合わせください。
             </p>
             <div class="envelope_btn">
-                <a href="#contact">
+                <a href="./contact/index.html#contact">
                     <img src="images/envelope_open-min.jpg" alt="open">
                     <img src="images/envelope_close-min.jpg" alt="close">
                 </a>
@@ -184,15 +201,15 @@
 
         <footer>
             <div class="footer_wrap">
-                <h1>
+                <div class="footer_img">
                     <img src="images/logo.svg" alt="main logo">
-                </h1>
+                </div>
                 <nav class="footer pc_nav">
                     <ul>
                         <li><a href="#top_works"><span>Works</span></a></li>
-                        <li><a href=""><span>Skills</span></a></li>
-                        <li><a href=""><span>Profile</span></a></li>
-                        <li><a href=""><span>Contact</span></a></li>
+                        <li><a href="#skills"><span>Skills</span></a></li>
+                        <li><a href="#profile"><span>Profile</span></a></li>
+                        <li><a href="#top_contact"><span>Contact</span></a></li>
                     </ul>
                 </nav>
             </div>

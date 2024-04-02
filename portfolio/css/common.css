@@ -31,7 +31,11 @@ a {
 }
 
 a:hover {
-  opacity: 0.6s;
+  opacity: 0.6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -60,28 +64,24 @@ main {
   align-items: center;
   padding-right: 40px;
 }
+.footer_img img,
 h1 img {
   width: 60%;
   margin: 40px 40px 20px 40px;
 }
-/* .main_logo {
-  margin: 4%;
-  width: 15%;
-} */
 .top_pc_nav {
   text-align: center;
   margin: 40px 0;
 }
-.top_pc_nav ul li {
+.top {
   font-size: 1.6vw;
   font-family: "Cinzel", serif;
-  padding: 20px 111px;
+  padding: 20px 8.5vw;
 }
 
 .works ul {
   display: flex;
 }
-
 .pc_nav ul li {
   font-size: 1.6vw;
   font-family: "Cinzel", serif;
@@ -150,6 +150,7 @@ h1 img {
     transform-origin: 0 100%;
   }
 }
+
 .btn {
   color: #fff;
   font-size: 16px;
@@ -164,6 +165,88 @@ h1 img {
 }
 .btn_space {
   margin-top: 160px;
+}
+.sp_nav,
+.sp_btn {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  h1 img {
+    width: 40%;
+  }
+  .sp_btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .sp_btn span {
+    position: relative;
+    top: 10px;
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: black;
+    transition: 0.3s;
+  }
+  .sp_btn span::before,
+  .sp_btn span::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: black;
+    transition: 0.3s;
+  }
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+  /* ハンバーガー 閉じる*/
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  /* ハンバーガーメニュー*/
+  .top {
+    margin: 0 20px;
+    padding: 0;
+  }
+  .sp_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* ディバイスの高さ*/
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .sp_nav ul li {
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Cinzel", serif;
+  }
 }
 
 .footer_wrap {

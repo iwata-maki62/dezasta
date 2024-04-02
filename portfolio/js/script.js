@@ -24,3 +24,25 @@
       }
     });
   });
+
+  $(function () {
+    const pagetop = $('.pagetop');
+    pagetop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 700) {
+            pagetop.fadeIn();
+        } else {
+            pagetop.fadeOut();
+        }
+    });
+    pagetop.click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 700);
+        return false;
+    });
+
+      $('.sp_btn, .sp_nav li').on('click', function () {
+          $('.sp_nav').fadeToggle();
+          $('.sp_btn').toggleClass('open');
+      });
+    
+});
