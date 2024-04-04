@@ -226,10 +226,12 @@ h1 img {
   .sp_btn.open span::before {
     bottom: 0;
     transform: rotate(45deg);
+    background: #fff;
   }
   .sp_btn.open span::after {
     top: 0;
     transform: rotate(135deg);
+    background: #fff;
   }
   /* ハンバーガーメニュー*/
   .top {
@@ -343,6 +345,7 @@ h1 img {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 @media screen and (max-width: 1000px) {
   .writing img {
     padding-top: 200px;
@@ -352,4 +355,7 @@ h1 img {
 
 .line_relative {
   position: relative;
+}
+.change {
+  cursor: url(images/cursor_img.png), auto;
 }
