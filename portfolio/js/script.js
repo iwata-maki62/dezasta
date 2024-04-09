@@ -1,3 +1,4 @@
+//フォント読み込み
 (function(d) {
     var config = {
       kitId: 'xbu7woo',
@@ -8,41 +9,37 @@
   })(document);
 
 
-  $('.tab li').on('click', function(){
-    let cat = $(this).html();
-    $('.list').hide(); // .listを一度すべて非表示にする
-  
-    // allの場合
-    if(cat == "All"){
-      $('.list').hide();
-      $('.list').fadeIn();
-    }
-    // 選択したカテゴリーだけを表示
-    $('.list').each(function(){
-      if($(this).data('cat') == cat){
-        $(this).fadeIn();
-      }
-    });
-  });
-
-  $(function () {
-    const pagetop = $('.pagetop');
-    pagetop.hide();
-    $(window).scroll(function () {
+$(function () {
+  const pagetop = $('.pagetop');
+  pagetop.hide();
+  $(window).scroll(function () {
         if ($(this).scrollTop() > 700) {
             pagetop.fadeIn();
         } else {
             pagetop.fadeOut();
         }
     });
-    pagetop.click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 700);
-        return false;
-    });
 
-      $('.sp_btn, .sp_nav li').on('click', function () {
+//ハンバーガーメニュー
+    $('.sp_btn, .sp_nav li').on('click', function () {
           $('.sp_nav').fadeToggle();
           $('.sp_btn').toggleClass('open');
       });
-    
+//WORKsタブ
+$('.tab li').on('click', function(){
+  let cat = $(this).html();
+  $('.list').hide(); // .listを一度すべて非表示にする
+
+  // allの場合
+  if(cat == "All"){
+    $('.list').hide();
+    $('.list').fadeIn();
+  }
+  // 選択したカテゴリーだけを表示
+  $('.list').each(function(){
+    if($(this).data('cat') == cat){
+      $(this).fadeIn();
+    }
+  });
+    });
 });

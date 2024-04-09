@@ -3,10 +3,11 @@
 }
 .contact img {
   width: 33%;
+  min-width: 200px;
   transform: translate(-10%, 0);
 }
 .contact_message {
-  font-size: 1.6vw;
+  font-size: clamp(14px 1.6vw 24px);
   color: #2d3487;
   margin: 5.3vw auto 8.9vw;
   text-align: center;
@@ -34,6 +35,9 @@ select {
   color: #999;
   border: 1px solid black;
   box-sizing: border-box;
+}
+textarea {
+  height: 200px;
 }
 button {
   margin: 20px 17% 50px;

@@ -54,9 +54,6 @@ body {
   background-color: #eddec1;
   /* background-repeat: repeat; */
 }
-main {
-  margin: 0 auto;
-}
 .header_wrap {
   display: flex;
   justify-content: space-between;
@@ -66,7 +63,7 @@ main {
 .footer_img img,
 h1 img {
   width: 60%;
-  margin: 40px 40px 20px 40px;
+  margin: 3.1vw 40px 20px 3.1vw;
 }
 .top_pc_nav {
   margin: 40px 0;
@@ -159,6 +156,22 @@ h1 img {
   padding: 18px 100px;
   border-radius: 30px;
   transition: 0.3s;
+  position: relative;
+}
+.btn::after {
+  /* 擬似要素で矢印アイコンをつくる */
+  content: "";
+  border: 0;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  /* 矢印アイコンの位置を設定 */
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%) rotate(45deg); /* rotate(45deg)で矢印を回転（向きを変更）させる */
 }
 .btn:hover {
   opacity: 0.6;
